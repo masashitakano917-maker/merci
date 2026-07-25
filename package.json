@@ -2,7 +2,8 @@
   "name": "merci-renewal-preview",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build": "mkdir -p dist/assets dist/.openai && cp index.html styles.css site.js dist/ && cp -R assets/. dist/assets/ && cp -R .openai/. dist/.openai/"
+    "build": "mkdir -p dist/assets dist/.openai dist/server && cp index.html styles.css site.js dist/ && cp -R assets/. dist/assets/ && cp -R .openai/. dist/.openai/ && cp server/index.js dist/server/index.js"
   }
 }

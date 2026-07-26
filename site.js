@@ -3,15 +3,18 @@ document.documentElement.classList.add("is-ready");
 const introStorageKey = "merci-intro-entered-for-reload";
 const oldIntroStorageKey = "merci-intro-entered";
 
-const getNavigationType = () => {
-  const navigationEntry = performance.getEntriesByType("navigation")[0];
-  return navigationEntry?.type || "navigate";
-};
-
 const hasSeenIntro = () => {
   try {
     localStorage.removeItem(oldIntroStorageKey);
-    return sessionStorage.getItem(introStorageKey) === "true" && getNavigationType() === "reload";
+    return sessionStorage.getItem(introStorageKey) === "true";
+  } catch {
+    return false;
+  }
+};
+
+const hasSkipIntroParam = () => {
+  try {
+    return new URLSearchParams(window.location.search).get("skipIntro") === "1";
   } catch {
     return false;
   }
@@ -25,9 +28,18 @@ const rememberIntro = () => {
   }
 };
 
-if (hasSeenIntro()) {
+const cleanSkipIntroParam = () => {
+  if (!hasSkipIntroParam()) return;
+
+  const cleanUrl = `${window.location.pathname}${window.location.hash}`;
+  window.history.replaceState({}, "", cleanUrl);
+};
+
+if (hasSeenIntro() || hasSkipIntroParam()) {
+  rememberIntro();
   document.body.classList.remove("intro-locked");
   document.body.classList.add("has-entered");
+  cleanSkipIntroParam();
 }
 
 const enterSite = () => {

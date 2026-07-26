@@ -1098,6 +1098,43 @@ body.intro-locked .site-shell {
     linear-gradient(180deg, rgba(3, 10, 10, 0.32), rgba(3, 10, 10, 0.1) 42%, rgba(3, 10, 10, 0.76));
 }
 
+.detail-back-link {
+  position: absolute;
+  z-index: 3;
+  top: clamp(108px, 8.5vw, 148px);
+  left: clamp(24px, 5.8vw, 112px);
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 18px;
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  backdrop-filter: blur(12px);
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.detail-back-link::before {
+  content: "";
+  width: 22px;
+  height: 1px;
+  margin-right: 10px;
+  background: currentColor;
+}
+
+.detail-back-link:hover {
+  border-color: rgba(126, 226, 218, 0.84);
+  background: rgba(0, 168, 150, 0.22);
+  transform: translateY(-1px);
+}
+
 .production-proof {
   position: relative;
   z-index: 2;
@@ -1958,6 +1995,14 @@ body.intro-locked .site-shell {
 
   .detail-hero {
     padding: 72px 22px 0;
+  }
+
+  .detail-back-link {
+    top: 88px;
+    left: 22px;
+    min-height: 38px;
+    padding: 0 14px;
+    font-size: 12px;
   }
 
   .detail-hero h1 {

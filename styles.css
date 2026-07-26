@@ -1058,6 +1058,56 @@ body.intro-locked .site-shell {
   font-weight: 800;
 }
 
+.production-map {
+  display: grid;
+  gap: 1px;
+  max-width: 720px;
+  margin-top: clamp(34px, 4.5vw, 62px);
+  background: rgba(16, 24, 23, 0.16);
+}
+
+.production-map a {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 0.86fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  min-height: 72px;
+  padding: 18px 22px;
+  background: rgba(255, 255, 255, 0.7);
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.production-map a:hover {
+  transform: translateX(4px);
+  background: #0d1413;
+  color: var(--white);
+}
+
+.production-map span {
+  color: var(--emerald);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.production-map strong {
+  color: inherit;
+  font-size: clamp(17px, 1.4vw, 24px);
+  line-height: 1;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.production-map small {
+  color: rgba(16, 24, 23, 0.58);
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+.production-map a:hover small {
+  color: rgba(255, 255, 255, 0.72);
+}
+
 .detail-visual {
   position: relative;
   min-height: clamp(460px, 58vw, 720px);
@@ -1296,6 +1346,14 @@ body.intro-locked .site-shell {
     min-height: auto;
   }
 
+  .production-map a {
+    grid-template-columns: 38px minmax(0, 1fr);
+  }
+
+  .production-map small {
+    grid-column: 2;
+  }
+
   .detail-visual {
     min-height: 460px;
   }
@@ -1507,6 +1565,11 @@ body.intro-locked .site-shell {
 
   .detail-hero h1 {
     font-size: clamp(54px, 17vw, 88px);
+  }
+
+  .production-map a {
+    min-height: auto;
+    padding: 16px;
   }
 
   .detail-visual,

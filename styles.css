@@ -1020,14 +1020,18 @@ body.intro-locked .site-shell {
 
 .detail-hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(420px, 0.8fr);
-  gap: clamp(42px, 6vw, 108px);
+  grid-template-columns: minmax(0, 0.86fr) minmax(420px, 0.9fr);
+  gap: clamp(48px, 7vw, 124px);
   align-items: end;
   min-height: calc(100vh - 88px);
   padding: clamp(86px, 9vw, 150px) clamp(24px, 5.8vw, 112px) clamp(70px, 7vw, 112px);
   background:
     linear-gradient(90deg, rgba(0, 160, 144, 0.08), transparent 34%),
     var(--paper);
+}
+
+.detail-hero-copy {
+  min-width: 0;
 }
 
 .detail-hero-copy span,
@@ -1044,7 +1048,7 @@ body.intro-locked .site-shell {
 .detail-hero h1 {
   margin: 0;
   color: var(--ink);
-  font-size: clamp(64px, 10vw, 172px);
+  font-size: clamp(64px, 8vw, 132px);
   line-height: 0.88;
   font-weight: 900;
 }
@@ -1056,6 +1060,10 @@ body.intro-locked .site-shell {
   font-size: clamp(18px, 1.45vw, 24px);
   line-height: 2;
   font-weight: 800;
+}
+
+.detail-hero-copy p + p {
+  margin-top: 18px;
 }
 
 .production-map {

@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&amp;family=Noto+Sans+JP:wght@400;500;700;800;900&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../../styles.css?v=20260726-0145" />
+    <link rel="stylesheet" href="../../styles.css?v=20260726-0155" />
   </head>
   <body>
     <main class="site-shell service-detail-shell">
@@ -40,23 +40,6 @@
             メルシーは年間数万枚もの写真を撮影し顧客へと納品をしております。
             スムーズな撮影手配から納品まで迅速なサービスを提供しております。
           </p>
-          <div class="production-map" aria-label="Production service menu">
-            <a href="#photo-movie">
-              <span>01</span>
-              <strong>Photo & Movie</strong>
-              <small>写真撮影 / 動画撮影</small>
-            </a>
-            <a href="#virtual-staging">
-              <span>02</span>
-              <strong>Virtual staging</strong>
-              <small>不動産写真の演出</small>
-            </a>
-            <a href="#retouch">
-              <span>03</span>
-              <strong>Retouch</strong>
-              <small>写真選定 / 画像補正</small>
-            </a>
-          </div>
         </div>
         <figure class="detail-visual">
           <img
@@ -71,46 +54,77 @@
 
       <section class="production-services" aria-labelledby="production-services-title">
         <div class="detail-section-head">
-          <span>Individual services</span>
+          <span>Production menu</span>
           <h2 id="production-services-title">Service Lineup</h2>
         </div>
         <div class="production-card-grid">
-          <article class="production-card" id="photo-movie">
+          <a class="production-card" href="#photo-movie">
             <span>01</span>
             <h3>Photo & Movie</h3>
+            <small>写真撮影 / 動画撮影</small>
             <p>
               世界に500人の精鋭フォトグラファーが常駐。世界にフォトグラファーコミュニティを持つことで多種多様なジャンルの撮影に対応します。
             </p>
-          </article>
-          <article class="production-card" id="virtual-staging">
+          </a>
+          <a class="production-card" href="#virtual-staging">
             <span>02</span>
             <h3>Virtual staging</h3>
+            <small>不動産写真の演出</small>
             <p>
               「第一印象」を左右する不動産写真。撮影会社だから実現できる、ハイクオリティなメルシーのバーチャルホームステージング。
             </p>
-          </article>
-          <article class="production-card" id="retouch">
+          </a>
+          <a class="production-card" href="#retouch">
             <span>03</span>
             <h3>Retouch</h3>
+            <small>写真選定 / 画像補正</small>
             <p>
               撮影後のフォトグラファーの作業が90%削減。大量撮影後の写真選定と画像補正を一括でお任せください。
             </p>
-          </article>
+          </a>
         </div>
       </section>
 
-      <section class="detail-intro" aria-label="Production overview">
-        <div class="detail-video-frame">
-          <img src="../../assets/hero-production.png" alt="広告撮影の現場" />
-          <span class="detail-play" aria-hidden="true"></span>
-        </div>
-        <div class="detail-intro-copy">
-          <span>Creative production network</span>
-          <p>
-            世界に広がるフォトグラファーコミュニティと制作管理体制で、
-            撮影依頼から納品、選定、補正までを一気通貫で支えます。
-          </p>
-        </div>
+      <section class="production-story" aria-label="Production service details">
+        <article class="production-story-item" id="photo-movie">
+          <figure class="production-story-media production-story-video">
+            <img src="../../assets/hero-production.png" alt="広告撮影の現場" />
+            <span class="detail-play" aria-hidden="true"></span>
+          </figure>
+          <div class="production-story-copy">
+            <span>01 / Photo & Movie</span>
+            <h2>Photo & Movie</h2>
+            <p>
+              世界に500人の精鋭フォトグラファーが常駐。世界にフォトグラファーコミュニティを持つことで多種多様なジャンルの撮影に対応します。
+            </p>
+          </div>
+        </article>
+
+        <article class="production-story-item production-story-item-reverse" id="virtual-staging">
+          <figure class="production-story-media">
+            <img src="../../assets/service-design.png" alt="不動産写真のビジュアル制作" />
+          </figure>
+          <div class="production-story-copy">
+            <span>02 / Virtual staging</span>
+            <h2>Virtual staging</h2>
+            <p>
+              「第一印象」を左右する不動産写真。撮影会社だから実現できる、ハイクオリティなメルシーのバーチャルホームステージング。
+            </p>
+          </div>
+        </article>
+
+        <article class="production-story-item" id="retouch">
+          <figure class="production-story-media">
+            <img src="../../assets/service-gallery.png" alt="写真選定と画像補正のイメージ" />
+          </figure>
+          <div class="production-story-copy">
+            <span>03 / Retouch</span>
+            <h2>Retouch</h2>
+            <p>
+              撮影後のフォトグラファーの作業が90%削減。大量撮影後の写真選定と画像補正を一括でお任せください。
+            </p>
+          </div>
+        </article>
       </section>
 
       <section class="detail-cta" aria-label="Contact">

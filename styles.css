@@ -363,105 +363,137 @@ body.intro-locked .site-shell {
 
 .statement {
   position: relative;
-  min-height: 92vh;
   display: grid;
-  grid-template-rows: 1fr auto;
-  overflow: hidden;
-  padding: clamp(112px, 11vw, 170px) clamp(24px, 5.8vw, 112px) clamp(36px, 5vw, 74px);
-  background: #07110f;
-  color: var(--white);
-}
-
-.statement-image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: saturate(0.82) contrast(1.06);
-  transform: scale(1.02);
-}
-
-.statement-shade {
-  position: absolute;
-  inset: 0;
+  gap: clamp(46px, 6vw, 96px);
+  padding: 0 clamp(24px, 5.8vw, 112px) clamp(86px, 8vw, 136px);
+  border-top: 1px solid rgba(10, 18, 17, 0.18);
   background:
-    linear-gradient(90deg, rgba(4, 10, 10, 0.92), rgba(4, 10, 10, 0.7) 39%, rgba(0, 151, 136, 0.3) 100%),
-    linear-gradient(180deg, rgba(4, 10, 10, 0.28), rgba(4, 10, 10, 0.7) 72%, rgba(4, 10, 10, 0.96));
+    linear-gradient(90deg, rgba(0, 160, 144, 0.08), transparent 28%),
+    #f4f8f7;
+  color: var(--ink);
+}
+
+.statement-boundary {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(10, 18, 17, 0.14);
+  color: rgba(10, 18, 17, 0.52);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.statement-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.72fr);
+  gap: clamp(44px, 7vw, 118px);
+  align-items: end;
 }
 
 .statement-content span {
-  position: relative;
   display: block;
-  margin-bottom: 26px;
-  color: rgba(255, 255, 255, 0.66);
+  margin-bottom: clamp(28px, 5vw, 72px);
+  color: var(--emerald);
   font-size: 13px;
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .statement-content {
-  position: relative;
-  z-index: 2;
-  align-self: center;
-  max-width: 1120px;
+  max-width: 940px;
 }
 
 .statement-content h2 {
-  max-width: 1040px;
   margin: 0;
-  color: var(--white);
-  font-size: clamp(56px, 9.2vw, 156px);
-  line-height: 0.9;
+  color: var(--ink);
+  font-size: clamp(54px, 7.8vw, 132px);
+  line-height: 0.96;
   font-weight: 900;
-  text-transform: uppercase;
+  letter-spacing: 0;
 }
 
 .statement-content p {
-  max-width: 620px;
-  margin: 34px 0 0;
-  color: rgba(255, 255, 255, 0.82);
-  font-size: clamp(16px, 1.35vw, 22px);
-  line-height: 2;
-  font-weight: 800;
+  margin: clamp(28px, 4vw, 58px) 0 0;
+  color: var(--emerald);
+  font-size: clamp(24px, 3vw, 44px);
+  line-height: 1.5;
+  font-weight: 900;
 }
 
-.profile-strip {
+.statement-visual {
   position: relative;
+  min-height: clamp(420px, 52vw, 680px);
+  margin: 0;
+  overflow: hidden;
+  background: #07110f;
+  isolation: isolate;
+}
+
+.statement-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(3, 10, 10, 0.1), rgba(3, 10, 10, 0.72)),
+    linear-gradient(90deg, rgba(0, 151, 136, 0.22), transparent 55%);
+  z-index: 1;
+}
+
+.statement-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+  filter: saturate(0.86) contrast(1.08);
+  transform: scale(1.02);
+}
+
+.statement-visual figcaption {
+  position: absolute;
+  left: clamp(20px, 2.2vw, 34px);
+  right: clamp(20px, 2.2vw, 34px);
+  bottom: clamp(20px, 2.2vw, 34px);
   z-index: 2;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0;
-  width: min(100%, 1120px);
-  margin: 74px 0 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(16px);
-}
-
-.profile-strip div {
-  min-height: 112px;
-  padding: 22px clamp(20px, 2.4vw, 34px);
-  border-right: 1px solid rgba(255, 255, 255, 0.14);
-}
-
-.profile-strip div:last-child {
-  border-right: 0;
-}
-
-.profile-strip dt {
-  margin-bottom: 16px;
-  color: var(--emerald-soft);
+  color: rgba(255, 255, 255, 0.82);
   font-size: 12px;
   font-weight: 900;
   text-transform: uppercase;
 }
 
-.profile-strip dd {
+.company-data {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0;
   margin: 0;
-  color: rgba(255, 255, 255, 0.88);
-  font-size: clamp(16px, 1.25vw, 20px);
+  border-top: 1px solid rgba(10, 18, 17, 0.16);
+  border-bottom: 1px solid rgba(10, 18, 17, 0.16);
+}
+
+.company-data div {
+  min-height: 138px;
+  padding: 24px clamp(18px, 2vw, 30px);
+  border-right: 1px solid rgba(10, 18, 17, 0.12);
+}
+
+.company-data div:last-child {
+  border-right: 0;
+}
+
+.company-data dt {
+  margin-bottom: 18px;
+  color: rgba(10, 18, 17, 0.48);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.company-data dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(14px, 1.15vw, 18px);
+  line-height: 1.75;
   font-weight: 900;
 }
 
@@ -991,7 +1023,8 @@ body.intro-locked .site-shell {
   }
 
   .statement,
-  .profile-strip,
+  .statement-layout,
+  .company-data,
   .service-grid,
   .capability-list,
   .capability-intro,
@@ -1003,25 +1036,31 @@ body.intro-locked .site-shell {
   }
 
   .statement {
-    min-height: auto;
-    padding-top: 110px;
+    padding-bottom: 82px;
+  }
+
+  .statement-layout {
+    align-items: start;
+  }
+
+  .statement-content span {
+    margin-bottom: 34px;
   }
 
   .statement-content h2 {
-    max-width: 720px;
+    max-width: 780px;
   }
 
-  .profile-strip {
-    width: 100%;
-    margin-top: 54px;
+  .statement-visual {
+    min-height: 480px;
   }
 
-  .profile-strip div {
+  .company-data div {
     border-right: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    border-bottom: 1px solid rgba(10, 18, 17, 0.12);
   }
 
-  .profile-strip div:last-child {
+  .company-data div:last-child {
     border-bottom: 0;
   }
 
@@ -1156,16 +1195,35 @@ body.intro-locked .site-shell {
   }
 
   .statement {
-    padding: 92px 22px 44px;
+    gap: 38px;
+    padding: 0 22px 64px;
+  }
+
+  .statement-boundary {
+    padding: 18px 0;
+  }
+
+  .statement-layout {
+    gap: 34px;
   }
 
   .statement-content h2 {
-    font-size: clamp(46px, 16vw, 86px);
+    font-size: clamp(44px, 13vw, 72px);
   }
 
   .statement-content p {
-    margin-top: 26px;
-    line-height: 1.85;
+    margin-top: 24px;
+    font-size: clamp(22px, 6vw, 30px);
+    line-height: 1.55;
+  }
+
+  .statement-visual {
+    min-height: 360px;
+  }
+
+  .company-data div {
+    min-height: auto;
+    padding: 22px 0;
   }
 
   .services,

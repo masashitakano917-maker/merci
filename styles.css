@@ -1636,6 +1636,7 @@ body.intro-locked .site-shell {
 }
 
 .production-story-copy {
+  display: grid;
   max-width: 760px;
 }
 
@@ -1671,6 +1672,257 @@ body.intro-locked .site-shell {
 
 .production-story-item-reverse .production-story-copy p {
   color: rgba(16, 24, 23, 0.7);
+}
+
+.story-detail-link {
+  justify-self: end;
+  display: inline-flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: clamp(28px, 4vw, 56px);
+  padding: 14px 0;
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.story-detail-link::before {
+  content: "";
+  width: clamp(58px, 6vw, 92px);
+  height: 1px;
+  background: currentColor;
+  transition: transform 180ms ease;
+  transform-origin: right center;
+}
+
+.story-detail-link::after {
+  content: "->";
+  font-size: 18px;
+  transform: translateY(-1px);
+}
+
+.story-detail-link:hover::before {
+  transform: scaleX(0.72);
+}
+
+.production-story-item-reverse .story-detail-link {
+  color: var(--emerald);
+}
+
+.service-leaf-shell {
+  background: #f4f8f7;
+  color: var(--ink);
+}
+
+.leaf-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
+  min-height: calc(100vh - 104px);
+  background: #0a1211;
+  color: var(--white);
+}
+
+.leaf-hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(92px, 8vw, 140px) clamp(24px, 5.8vw, 112px);
+}
+
+.leaf-back-link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 42px;
+  margin-bottom: clamp(44px, 6vw, 88px);
+  padding: 0 20px;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.leaf-back-link::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: currentColor;
+}
+
+.leaf-hero-copy > span,
+.leaf-feature span {
+  color: var(--emerald-soft);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.leaf-hero-copy h1 {
+  max-width: 780px;
+  margin: 22px 0 26px;
+  color: var(--white);
+  font-size: clamp(68px, 9vw, 150px);
+  line-height: 0.88;
+  font-weight: 900;
+}
+
+.leaf-hero-copy p {
+  max-width: 680px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(17px, 1.35vw, 22px);
+  line-height: 2;
+  font-weight: 700;
+}
+
+.leaf-hero-media,
+.leaf-wide-media,
+.leaf-card {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  background: #07110f;
+}
+
+.leaf-hero-media {
+  min-height: inherit;
+}
+
+.leaf-hero-media::after,
+.leaf-wide-media::after,
+.leaf-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(3, 10, 10, 0.02), rgba(3, 10, 10, 0.28)),
+    linear-gradient(90deg, rgba(0, 151, 136, 0.18), transparent 60%);
+  pointer-events: none;
+}
+
+.leaf-hero-media img,
+.leaf-wide-media img,
+.leaf-card img {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+  filter: saturate(0.92) contrast(1.06);
+}
+
+.leaf-video .detail-play {
+  display: block;
+}
+
+.leaf-menu {
+  display: grid;
+  gap: 20px;
+  padding: clamp(80px, 8vw, 126px) clamp(24px, 7vw, 132px);
+  background: #f4f8f7;
+}
+
+.leaf-menu a {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr);
+  align-items: center;
+  min-height: 82px;
+  padding: 0 clamp(24px, 4vw, 62px);
+  border: 1px solid rgba(16, 24, 23, 0.78);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: clamp(22px, 2.2vw, 38px);
+  font-weight: 700;
+}
+
+.leaf-menu span {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.leaf-feature {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.78fr) minmax(0, 1fr);
+  gap: clamp(38px, 6vw, 108px);
+  align-items: center;
+  padding: clamp(84px, 9vw, 144px) clamp(24px, 5.8vw, 112px);
+  background: var(--white);
+}
+
+.leaf-feature-reverse {
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.78fr);
+  background: #f4f8f7;
+}
+
+.leaf-feature-reverse > div:first-child {
+  order: 2;
+}
+
+.leaf-feature h2 {
+  margin: 18px 0 18px;
+  color: var(--ink);
+  font-size: clamp(42px, 5vw, 92px);
+  line-height: 0.95;
+  font-weight: 900;
+}
+
+.leaf-feature p,
+.leaf-results p {
+  max-width: 680px;
+  margin: 0;
+  color: rgba(16, 24, 23, 0.72);
+  font-size: clamp(16px, 1.25vw, 20px);
+  line-height: 2;
+  font-weight: 700;
+}
+
+.leaf-wide-media {
+  min-height: clamp(520px, 54vw, 760px);
+}
+
+.leaf-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  align-items: end;
+}
+
+.leaf-gallery-four {
+  grid-template-columns: repeat(4, minmax(190px, 1fr));
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.leaf-card {
+  min-height: clamp(360px, 40vw, 620px);
+}
+
+.leaf-gallery-four .leaf-card {
+  min-height: clamp(360px, 36vw, 560px);
+}
+
+.leaf-results {
+  padding: clamp(86px, 9vw, 148px) clamp(24px, 5.8vw, 112px);
+  text-align: center;
+  background: #f4f8f7;
+}
+
+.leaf-results h2 {
+  margin: 0 0 36px;
+  color: var(--ink);
+  font-size: clamp(30px, 3vw, 52px);
+  font-weight: 900;
+}
+
+.leaf-results p {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .detail-cta {
@@ -1729,7 +1981,10 @@ body.intro-locked .site-shell {
   .detail-section-head,
   .production-card-grid,
   .production-story-item,
-  .production-story-item-reverse {
+  .production-story-item-reverse,
+  .leaf-hero,
+  .leaf-feature,
+  .leaf-feature-reverse {
     grid-template-columns: 1fr;
   }
 
@@ -1792,6 +2047,22 @@ body.intro-locked .site-shell {
 
   .production-story-item-reverse .production-story-media {
     order: 0;
+  }
+
+  .leaf-hero {
+    min-height: auto;
+  }
+
+  .leaf-hero-media {
+    min-height: 520px;
+  }
+
+  .leaf-feature-reverse > div:first-child {
+    order: 0;
+  }
+
+  .leaf-gallery-four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .production-story-media {
@@ -2063,6 +2334,49 @@ body.intro-locked .site-shell {
 
   .production-story-copy h2 {
     font-size: clamp(46px, 14vw, 82px);
+  }
+
+  .story-detail-link {
+    justify-self: start;
+  }
+
+  .leaf-hero-copy,
+  .leaf-menu,
+  .leaf-feature,
+  .leaf-results {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .leaf-hero-copy {
+    padding-top: 72px;
+    padding-bottom: 54px;
+  }
+
+  .leaf-back-link {
+    margin-bottom: 42px;
+  }
+
+  .leaf-hero-copy h1 {
+    font-size: clamp(54px, 17vw, 78px);
+  }
+
+  .leaf-hero-media,
+  .leaf-wide-media,
+  .leaf-card {
+    min-height: 340px;
+  }
+
+  .leaf-menu a {
+    grid-template-columns: 44px minmax(0, 1fr);
+    min-height: 72px;
+    padding: 0 22px;
+    font-size: 20px;
+  }
+
+  .leaf-gallery,
+  .leaf-gallery-four {
+    grid-template-columns: 1fr;
   }
 
   .detail-cta {

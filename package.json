@@ -4,6 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "dev": "vite",
     "build": "mkdir -p dist/assets dist/client/assets dist/public/assets dist/services dist/client/services dist/public/services dist/.openai dist/server && cp index.html styles.css site.js dist/ && cp index.html styles.css site.js dist/client/ && cp index.html styles.css site.js dist/public/ && cp -R assets/. dist/assets/ && cp -R assets/. dist/client/assets/ && cp -R assets/. dist/public/assets/ && cp -R services/. dist/services/ && cp -R services/. dist/client/services/ && cp -R services/. dist/public/services/ && cp -R .openai/. dist/.openai/ && cp server/index.js dist/server/index.js"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
   }
 }

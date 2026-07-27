@@ -1934,6 +1934,20 @@ body.intro-locked .site-shell {
   filter: saturate(0.92) contrast(1.04);
 }
 
+.movie-reel-card video:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  background: #000;
+}
+
+.movie-reel-card video:-webkit-full-screen {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  background: #000;
+}
+
 .movie-reel-card figcaption {
   display: grid;
   gap: 4px;

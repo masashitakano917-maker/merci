@@ -1907,6 +1907,59 @@ body.intro-locked .site-shell {
   min-height: clamp(360px, 36vw, 560px);
 }
 
+.movie-reel-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(190px, 1fr));
+  gap: clamp(16px, 2vw, 28px);
+  align-items: end;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.movie-reel-card {
+  display: grid;
+  gap: 14px;
+  min-width: 190px;
+  margin: 0;
+}
+
+.movie-reel-card video {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border: 0;
+  border-radius: 0;
+  background: #07110f;
+  box-shadow: 0 24px 70px rgba(4, 18, 17, 0.16);
+  filter: saturate(0.92) contrast(1.04);
+}
+
+.movie-reel-card figcaption {
+  display: grid;
+  gap: 4px;
+  color: var(--ink);
+}
+
+.movie-reel-card span {
+  color: var(--emerald);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.movie-reel-card strong {
+  font-size: clamp(17px, 1.4vw, 22px);
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.movie-reel-card small {
+  color: rgba(16, 24, 23, 0.56);
+  font-size: 12px;
+  font-weight: 800;
+}
+
 .retouch-capability-list {
   display: grid;
   gap: 14px;
@@ -2208,6 +2261,10 @@ body.intro-locked .site-shell {
 
   .leaf-gallery-four {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .movie-reel-grid {
+    grid-template-columns: repeat(4, minmax(180px, 1fr));
   }
 
   .production-story-media {
@@ -2534,6 +2591,11 @@ body.intro-locked .site-shell {
   .staging-showcase-head,
   .staging-compare {
     grid-template-columns: 1fr;
+  }
+
+  .movie-reel-grid {
+    grid-template-columns: repeat(4, minmax(180px, 72vw));
+    gap: 16px;
   }
 
   .staging-compare figure {

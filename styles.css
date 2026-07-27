@@ -577,8 +577,8 @@ body.intro-locked .site-shell {
 }
 
 .service-row-global {
-  width: min(100%, 92vw);
-  margin: 26px auto 0;
+  width: 100%;
+  margin: 0;
 }
 
 .service-more {
@@ -2936,7 +2936,7 @@ body.intro-locked .site-shell {
   }
 
   .service-row-global {
-    margin-top: 12px;
+    margin-top: 0;
   }
 
   .service-more {

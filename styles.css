@@ -2364,8 +2364,8 @@ body.intro-locked .site-shell {
   }
 
   .footer-main {
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
+    gap: 20px;
+    padding: 40px 20px;
   }
 
   .footer-bottom {
@@ -2660,6 +2660,10 @@ body.intro-locked .site-shell {
   .hero-meta,
   .footer-bottom {
     display: grid;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
   }
 
   .hero {

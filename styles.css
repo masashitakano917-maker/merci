@@ -1075,7 +1075,12 @@ body.intro-locked .site-shell {
 }
 
 .detail-hero-copy p + p {
-  margin-top: 8px;
+  margin-top: 10px;
+}
+
+.detail-hero-platform .detail-hero-copy p {
+  max-width: 700px;
+  line-height: 1.92;
 }
 
 .detail-hero-bg {

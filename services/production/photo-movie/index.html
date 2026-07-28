@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&amp;family=Noto+Sans+JP:wght@400;500;700;800;900&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../../../styles.css?v=20260727-1150" />
+  <link rel="stylesheet" href="../../../styles.css?v=20260728-1005" />
   </head>
   <body>
     <main class="site-shell service-leaf-shell">
@@ -43,11 +43,64 @@
         </figure>
       </section>
 
-      <section class="leaf-menu" aria-label="Photo & Movie service menu">
-        <a href="#food"><span>01</span>フード / プロダクト撮影</a>
-        <a href="#realestate"><span>02</span>不動産撮影</a>
-        <a href="#portrait"><span>03</span>ポートレイト撮影</a>
-        <a href="#movie"><span>04</span>空撮 / ドローン撮影 / 水中撮影</a>
+      <section class="photo-menu" aria-labelledby="photo-menu-title">
+        <div class="photo-menu-head">
+          <div>
+            <span>Photography Type</span>
+            <h2 id="photo-menu-title">対応撮影の種類</h2>
+          </div>
+          <p>
+            商品、空間、人物、イベント、空撮まで。目的や媒体に合わせて、必要な撮影チームと制作フローを組み立てます。
+          </p>
+        </div>
+      <div class="photo-menu-list photo-card-grid">
+        <a class="photo-card photo-card-large" href="#photo" style="--photo-card-image: url('../../../assets/photo-type-product.png')">
+          <span class="photo-card-number">01</span>
+          <strong>フード /<br />プロダクト<br />撮影</strong>
+          <span class="photo-card-cta">VIEW MORE</span>
+        </a>
+        <a class="photo-card" href="#photo" style="--photo-card-image: url('../../../assets/photo-type-realestate.png')">
+          <span class="photo-card-number">02</span>
+          <strong>不動産撮影</strong>
+          <span class="photo-card-cta">VIEW MORE</span>
+        </a>
+        <a class="photo-card" href="#photo" style="--photo-card-image: url('../../../assets/photo-type-portrait.png')">
+          <span class="photo-card-number">03</span>
+          <strong>ポートレイト<br />撮影</strong>
+          <span class="photo-card-cta">VIEW MORE</span>
+        </a>
+        <a class="photo-card" href="#photo" style="--photo-card-image: url('../../../assets/photo-type-event.png')">
+          <span class="photo-card-number">04</span>
+          <strong>イベント撮影</strong>
+          <span class="photo-card-cta">VIEW MORE</span>
+        </a>
+        <a class="photo-card" href="#movie" style="--photo-card-image: url('../../../assets/photo-type-aerial.png')">
+          <span class="photo-card-number">05</span>
+          <strong>空撮 /<br />ドローン撮影 /<br />水中撮影</strong>
+          <span class="photo-card-cta">VIEW MORE</span>
+        </a>
+      </div>
+    </section>
+
+      <section class="leaf-feature photo-feature" id="photo">
+        <div>
+          <span>Photo</span>
+          <h2>Photo</h2>
+          <p>
+            商品、空間、人物、イベントまで、ブランドの見え方に合わせて撮影を設計します。媒体や納品形式に応じて、撮影手配、進行管理、編集、データ納品までを一貫して対応します。
+          </p>
+        </div>
+        <div class="photo-feature-grid">
+          <figure class="photo-feature-main">
+            <img src="../../../assets/service-production.png" alt="撮影現場の光とプロダクト" />
+          </figure>
+          <figure>
+            <img src="../../../assets/hero-production.png" alt="人物撮影の現場" />
+          </figure>
+          <figure>
+            <img src="../../../assets/service-gallery.png" alt="イベントやギャラリー空間の撮影" />
+          </figure>
+        </div>
       </section>
 
       <section class="leaf-feature" id="movie">
@@ -95,23 +148,10 @@
         </div>
       </section>
 
-      <section class="leaf-feature leaf-feature-reverse" id="portrait">
+      <section class="leaf-feature" id="photoline">
         <div>
-          <span>Artist Photo</span>
-          <h2>Artist Photo</h2>
-          <p>
-            人物の表情、ブランドの空気、活動の背景まで含めて撮影。プロフィール、アーティスト写真、広告用ポートレイトなどに対応します。
-          </p>
-        </div>
-        <figure class="leaf-wide-media">
-          <img src="../../../assets/hero-production.png" alt="ポートレイト撮影の現場" />
-        </figure>
-      </section>
-
-      <section class="leaf-feature" id="food">
-        <div>
-          <span>Photline</span>
-          <h2>Photline</h2>
+          <span>Photoline</span>
+          <h2>Photoline</h2>
           <p>
             カフェ、レストラン、アパレル、雑貨店、ECサイトなど、店舗や商品の撮影を継続的に支援します。毎月の撮影にも対応できる体制を整えています。
           </p>
